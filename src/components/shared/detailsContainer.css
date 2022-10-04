@@ -1,0 +1,15 @@
+.details-container__header{
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+    border-bottom: 2px solid red;
+}
+
+.details-container__content{
+    padding: 1rem;
+}
+
+.edit-button{
+    outline: none;
+    cursor: pointer;
+}

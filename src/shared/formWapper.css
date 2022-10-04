@@ -1,0 +1,18 @@
+.form-wrapper{
+    background-color: rgb(124, 124, 244);
+    position: absolute;
+    padding: 20px 20px 0 20px ;
+    margin: 114px;
+}
+
+.form_navigate-buttons{
+    bottom: 6px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    gap:10rem;
+}
+
+.form-data{
+    padding: 1rem;
+}

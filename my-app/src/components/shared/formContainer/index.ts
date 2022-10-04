@@ -1,0 +1,1 @@
+export type { FormWrapperProps } from './types'

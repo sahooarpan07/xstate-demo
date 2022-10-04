@@ -1,0 +1,23 @@
+.radio-items__container{
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-item{
+    display: flex;
+    gap:0.8rem;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+}
+
+.data-cotainer{
+    display: flex;
+    gap: 1.5rem;
+}
+.error-message{
+    color:red;
+}

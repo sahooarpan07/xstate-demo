@@ -1,0 +1,9 @@
+.radio-items__container{
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-item{
+    display: flex;
+    gap:0.8rem;
+}
