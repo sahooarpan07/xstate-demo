@@ -7,9 +7,7 @@ const MilitaryQuestions = () => {
   const navigate = useNavigate();
   const {
     state: {
-      context: {
-        accountDetails: { militaryName = "" },
-      },
+      context: { accountDetails: { militaryName = "" } = {} },
     },
     send,
   } = useContext(NewAccountContext);

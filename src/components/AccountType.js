@@ -34,7 +34,7 @@ const AccountType = () => {
       }}
       isDisabled={!selectedItem}
     >
-      AccountType
+      <h3>Select Account Type</h3>
       {radioItems.map((item, index) => {
         const { label, value } = item;
         return (

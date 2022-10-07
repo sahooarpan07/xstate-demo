@@ -14,7 +14,6 @@ function newAccountReducer(state, action) {
         ...contactDetails,
         firstName: payload,
       };
-      console.log(updatedContactDetails);
       return {
         ...state,
         contactDetails: updatedContactDetails,

@@ -5,7 +5,7 @@ export const enterPaymentDetails = {
       target: "enterBuisnessInfo",
     },
     NEXT: {
-      target: "summary",
+      target: "enterShippingInfo",
       actions: assign({
         paymentInformation: (_context, event) => event.data,
       }),

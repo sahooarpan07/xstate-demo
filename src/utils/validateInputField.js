@@ -4,7 +4,7 @@ export const isValidEmail = (email) => {
 };
 
 export const isValidPhoneNumber = (phone) => {
-  const phoneRegex = /^\d{11}$/;
+  const phoneRegex = /^\d{10}$/;
   return phone.match(phoneRegex);
 };
 

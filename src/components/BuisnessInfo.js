@@ -72,7 +72,8 @@ const BuisnessInfo = () => {
         )
       }
     >
-      <main className="form-container">
+      <main className="buisness-details">
+        <h2>Buisness Information</h2>
         <h5>Enter Contact Info:</h5>
         <input
           type={"text"}

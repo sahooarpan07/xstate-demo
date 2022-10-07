@@ -2,7 +2,7 @@ import { assign } from "xstate";
 export const summary = {
   on: {
     BACK: {
-      target: "enterPaymentDetails",
+      target: "addMoreShippingInfo",
     },
     EDIT_BUISNESS_INFO: {
       target: "editBuisnessInfo",
@@ -14,6 +14,12 @@ export const summary = {
       target: "editPaymentInfo",
       actions: assign({
         isEditFlow: () => true,
+      }),
+    },
+    EDIT_SHIPMENT_INFO: {
+      target: "editShipmentInfo",
+      actions: assign({
+        selectedShipInfoIndex: (_context, event) => event.data,
       }),
     },
   },

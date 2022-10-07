@@ -21,6 +21,8 @@ export const context = {
     },
   },
   isEditFlow: false,
+  shippingInfo: [],
+  selectedShipInfoIndex: undefined,
 };
 const vetContext = {
   ...context,

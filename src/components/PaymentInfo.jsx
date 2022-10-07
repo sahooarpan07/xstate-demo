@@ -58,7 +58,7 @@ const PaymentInfo = () => {
         if(paymentMethod && isValidAccountNumber(accountNumber) && isValidBankName(bankName)){
           send("NEXT", { data: state });
         
-        navigate("/summary")
+        navigate("/shippingInfo")
         
 
         }
@@ -66,7 +66,7 @@ const PaymentInfo = () => {
       }}
       isDisabled={!(paymentMethod && accountNumber && bankName)}
     >
-      <main className="form-container">
+      <main>
         <h5>Please choose your Payment mode:</h5>
         {radioItems.map((item, index) => {
         const { label, value } = item;

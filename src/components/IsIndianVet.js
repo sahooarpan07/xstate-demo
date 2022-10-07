@@ -8,9 +8,7 @@ import { NewAccountContext } from "../context/Context";
 const IsIndianVet = () => {
   const {
     state: {
-      context: {
-        accountDetails: { vetDetails: { isIndianVet } = {} },
-      },
+      context: { accountDetails: { vetDetails: { isIndianVet } = {} } = {} },
     } = {},
     send,
   } = useContext(NewAccountContext);

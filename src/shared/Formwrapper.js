@@ -9,15 +9,19 @@ const Formwrapper = ({
   isDisabled = true,
 }) => {
   return (
-    <main className="form-wrapper">
-      <div className="form-data">{children}</div>
-      <div className="form_navigate-buttons">
-        {handleBackClick && <button onClick={handleBackClick}>Back</button>}
-        <button onClick={handleNextClick} disabled={isDisabled}>
-          {nextButtonText}
-        </button>
-      </div>
-    </main>
+    <div className="container">
+      <main className="form-container">
+        <div className="form-wrapper">
+          <div className="form-data">{children}</div>
+          <div className="form_navigate-buttons">
+            {handleBackClick && <button onClick={handleBackClick}>Back</button>}
+            <button onClick={handleNextClick} disabled={isDisabled}>
+              {nextButtonText}
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
   );
 };
 

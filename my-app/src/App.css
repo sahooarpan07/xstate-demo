@@ -1,7 +1,10 @@
- .form-container{
+*{
+  box-sizing: border-box;
+}
+.form-container{
   align-items: center;
   justify-content: center;
   display: flex;
   height: 100vh;
-  margin: 400px;
+  margin: 200px;
 } 

@@ -7,9 +7,7 @@ const UniversityQuestions = () => {
   const navigate = useNavigate();
   const {
     state: {
-      context: {
-        accountDetails: { isIndianUniversity },
-      },
+      context: { accountDetails: { isIndianUniversity } = {} },
     },
     send,
   } = useContext(NewAccountContext);

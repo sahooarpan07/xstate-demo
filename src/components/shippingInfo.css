@@ -1,0 +1,15 @@
+.shippingInfo_details{
+    display: flex;
+    gap:8px;
+}
+
+.time-input{
+    margin-top: 16px;
+    height: 60px;
+}
+
+.check-agreement{
+    display: flex;
+    width: 400px;
+    gap: 1px;
+}

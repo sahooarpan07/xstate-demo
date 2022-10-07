@@ -5,7 +5,6 @@ export const initialVetState = {
 };
 
 export const setVetDetails = () => {
-  console.log("vet test");
   assign({
     accountDetails: (_context, event) => {
       return {

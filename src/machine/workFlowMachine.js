@@ -9,7 +9,9 @@ import { enterPaymentDetails } from "./stateMachines/enterPaymentDetails";
 import { summary } from "./stateMachines/summary";
 import { editBuisnessInfo } from "./stateMachines/editBuisnessInfo";
 import { editPaymentInfo } from "./stateMachines/editPaymentInfo";
+import { enterShippingInfo } from "./stateMachines/shippingInfo";
 import { context, vetContext } from "./stateMachines/context";
+import { addMoreShippingInfo } from "./stateMachines/addMoreShippingInfo";
 const workFlowMachine = createMachine({
   id: "workFlow",
   initial: "selectAccountState",
@@ -22,6 +24,8 @@ const workFlowMachine = createMachine({
     actionSelection,
     enterBuisnessInfo,
     enterPaymentDetails,
+    enterShippingInfo,
+    addMoreShippingInfo,
     summary,
     editBuisnessInfo,
     editPaymentInfo,
@@ -40,6 +44,7 @@ const vetMachine = createMachine({
     actionSelection,
     enterBuisnessInfo,
     enterPaymentDetails,
+    enterShippingInfo,
     summary,
     editBuisnessInfo,
     editPaymentInfo,
