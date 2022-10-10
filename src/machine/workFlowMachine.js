@@ -10,6 +10,7 @@ import { summary } from "./stateMachines/summary";
 import { editBuisnessInfo } from "./stateMachines/editBuisnessInfo";
 import { editPaymentInfo } from "./stateMachines/editPaymentInfo";
 import { enterShippingInfo } from "./stateMachines/shippingInfo";
+import { editShipmentInfo } from "./stateMachines/editShipmentInfo";
 import { context, vetContext } from "./stateMachines/context";
 import { addMoreShippingInfo } from "./stateMachines/addMoreShippingInfo";
 const workFlowMachine = createMachine({
@@ -29,6 +30,7 @@ const workFlowMachine = createMachine({
     summary,
     editBuisnessInfo,
     editPaymentInfo,
+    editShipmentInfo,
   },
 });
 

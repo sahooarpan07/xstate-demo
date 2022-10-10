@@ -19,7 +19,7 @@ const ShippingInfo = () => {
         {
             id:1,
             value:"Monday",
-            isActive:true,
+            isActive:false,
             operationTiming:''
         },
         {
@@ -43,7 +43,7 @@ const ShippingInfo = () => {
         {
             id:5,
             value:"Friday",
-            isActive:true,
+            isActive:false,
             operationTiming:''
         },
         {
@@ -54,9 +54,7 @@ const ShippingInfo = () => {
         }
     ]
 
-    const {  send } = useContext(NewAccountContext);
-    const navigate = useNavigate();
-    const [ state , dispatch ] = useReducer(shippingLocationReducer,{
+    const initialLocalState = {
         workingDays:days,
         shippingLocation:'',
         shippingAddress:{
@@ -66,7 +64,14 @@ const ShippingInfo = () => {
         },
         shippingInstructions:"",
         isChecked:false
-     })
+     };
+
+    const { state : globalState , send } = useContext(NewAccountContext);
+    const navigate = useNavigate();
+    const isEditFlow = globalState.value==="editShipmentInfo"
+   
+    const initialReducerState = isEditFlow ? globalState.context.shippingInfo[globalState.context.selectedShipInfoIndex] : initialLocalState
+    const [ state , dispatch ] = useReducer(shippingLocationReducer,initialReducerState)
      const { workingDays , shippingInstructions , shippingLocation , shippingAddress , isChecked = false  } = state
     const isIncompleteWorkingHourPresent = workingDays.find(day =>{
         return day.isActive && !day.operationTiming
@@ -78,7 +83,19 @@ const ShippingInfo = () => {
     const isShippingAddressIncomplete = streetAddress && city && zipCode
 
     const isComplete =  !isIncompleteWorkingHourPresent && Boolean(shippingLocation) && Boolean(isShippingAddressIncomplete) && Boolean(shippingInstructions)
-    
+   
+      const updatedData = {
+        shippingLocation,
+        workingDays,
+        shippingAddress,
+        shippingInstructions
+      }
+      const editFlowData = globalState.context.shippingInfo.map((item,index)=>{
+        if(index === globalState.context.selectedShipInfoIndex){
+           return globalState.context.shippingInfo[index] = updatedData
+        }
+        return item
+      })
 
   return (
 
@@ -89,15 +106,16 @@ const ShippingInfo = () => {
         navigate("/capturePaymentInfo")
     }}
     handleNextClick={()=>{
+       // console.log('next');
         send("NEXT",{
-            data:{
-                shippingLocation,
-                workingDays,
-                shippingAddress,
-                shippingInstructions
-            }
+            data: isEditFlow?editFlowData:updatedData
         })
-        navigate("/addMoreShippingInfo")
+         
+            const nextRoutePath = isEditFlow ? "/summary":"/addMoreShippingInfo"
+            navigate(nextRoutePath)
+   
+
+        
     }}
     isDisabled={!isComplete}
     >

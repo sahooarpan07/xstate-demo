@@ -2,7 +2,6 @@ function shippingLocationReducer(state, action) {
   const { type, payload } = action;
   switch (type) {
     case "UPDATE_WORKING_HOURS":
-      console.log("reducer", payload);
       return {
         ...state,
         workingDays: payload,

@@ -3,13 +3,17 @@ export const enterShippingInfo = {
   on: {
     BACK: {
       target: "enterPaymentDetails",
+      actions: assign({
+        shippingInfo: (_context, event) => [],
+      }),
     },
     NEXT: {
-      target: "summary",
+      target: "addMoreShippingInfo",
+
       actions: assign({
         shippingInfo: (_context, event) => [
-          ..._context.shippingInfo,
           event.data,
+          ..._context.shippingInfo,
         ],
       }),
     },

@@ -56,11 +56,11 @@ const BuisnessInfo = () => {
           isValidEmail(email) &&
           isValidPhoneNumber(phoneNum) &&
           Boolean(buisnessName || buisnessId);
-        if (isValid) {
-          send("NEXT", { data: state });
-          const nextRoute = isEditFlow ? "/summary" : "/capturePaymentInfo";
-          navigate(nextRoute);
-        }
+        // if (isValid) {
+        send("NEXT", { data: state });
+        const nextRoute = isEditFlow ? "/summary" : "/capturePaymentInfo";
+        navigate(nextRoute);
+        //}
       }}
       isDisabled={
         !(
@@ -80,7 +80,6 @@ const BuisnessInfo = () => {
           value={firstName}
           placeholder="Enter First Name"
           onChange={(e) => {
-            console.log(e.target.value);
             dispatch({ type: "UPDATE_FIRST_NAME", payload: e.target.value });
           }}
         />

@@ -23,7 +23,6 @@ const Summary = () => {
           },
           shippingInfo:shippingInfoArray=[]
     } } = state;
-
     const navigate = useNavigate()
 
     
@@ -97,13 +96,13 @@ const Summary = () => {
                 Shipping Address
               </strong>
               <p>
-                {shippingInfo.shippingAddress.streetAddress}
+                {shippingInfo?.shippingAddress?.streetAddress}
               </p>
               <p>
-                {shippingInfo.shippingAddress.city}
+                {shippingInfo?.shippingAddress?.city}
               </p>
               <p>
-                {shippingInfo.shippingAddress.zipCode}
+                {shippingInfo?.shippingAddress?.zipCode}
               </p>
               
             </section>

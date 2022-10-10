@@ -55,13 +55,13 @@ const PaymentInfo = () => {
       }}
       handleNextClick={() => {
         dispatch({ type: "UPDATE_BANK_ERROR_DETAILS" });
-        if(paymentMethod && isValidAccountNumber(accountNumber) && isValidBankName(bankName)){
+        //if(paymentMethod && isValidAccountNumber(accountNumber) && isValidBankName(bankName)){
           send("NEXT", { data: state });
         
         navigate("/shippingInfo")
         
 
-        }
+        //}
         
       }}
       isDisabled={!(paymentMethod && accountNumber && bankName)}
