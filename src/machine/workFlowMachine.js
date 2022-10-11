@@ -12,7 +12,6 @@ import { editPaymentInfo } from "./stateMachines/editPaymentInfo";
 import { enterShippingInfo } from "./stateMachines/shippingInfo";
 import { editShipmentInfo } from "./stateMachines/editShipmentInfo";
 import { context, vetContext } from "./stateMachines/context";
-import { addMoreShippingInfo } from "./stateMachines/addMoreShippingInfo";
 const workFlowMachine = createMachine({
   id: "workFlow",
   initial: "selectAccountState",
@@ -26,7 +25,6 @@ const workFlowMachine = createMachine({
     enterBuisnessInfo,
     enterPaymentDetails,
     enterShippingInfo,
-    addMoreShippingInfo,
     summary,
     editBuisnessInfo,
     editPaymentInfo,
