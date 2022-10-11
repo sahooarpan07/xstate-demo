@@ -24,7 +24,8 @@ const VETQuestions = () => {
       }}
       handleNextClick={() => {
         send("NEXT", { data: selectedItem });
-        navigate("/vetIndian");
+        // navigate("/vetIndian");
+        navigate("/actionSelection");
       }}
       isDisabled={!selectedItem}
     >

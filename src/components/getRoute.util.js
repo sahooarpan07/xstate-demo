@@ -5,10 +5,10 @@ const getRoute = (accountType, vetName) => {
     case "university":
       return "/university";
     case "vet":
-      if (vetName) {
-        return "/vetIndian";
-      }
-      return "/vetquestionarrie";
+      // if (vetName) {
+      return "/vetIndian";
+
+    //return "/vetquestionarrie";
     default:
       return "/vetquestionarrie";
   }

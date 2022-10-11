@@ -34,7 +34,8 @@ const IsIndianVet = () => {
       }}
       handleNextClick={() => {
         send("NEXT", { data: selectedItem });
-        navigate("/actionSelection");
+        //navigate("/actionSelection");
+        navigate("/vetquestionarrie");
       }}
       isDisabled={!selectedItem}
     >
